@@ -212,6 +212,8 @@ func (c *Connection) Init() error {
 		initOp.Flags |= fusekernel.InitReaddirplusAuto
 	}
 
+	initOp.Flags |= fusekernel.InitExplicitInvalData
+
 	return c.Reply(ctx, nil)
 }
 
